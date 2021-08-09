@@ -46,7 +46,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Colours.cs" />
     <Compile Include="Round Levels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

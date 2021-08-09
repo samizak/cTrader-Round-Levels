@@ -8,8 +8,8 @@ namespace cAlgo.Indicators
     {
         #region Parameters
 
-        [Parameter(name: "Colour", DefaultValue = Colours.Gray, Group = "Line Properties")]
-        public Colours Colour { get; set; }
+        [Parameter(name: "Colour", DefaultValue = "Gray", Group = "Line Properties")]
+        public string Colour { get; set; }
 
         [Parameter(name: "Opacity (%)", DefaultValue = 100, MinValue = 0, MaxValue = 100, Step = 5, Group = "Line Properties")]
         public int Opacity { get; set; }
@@ -34,6 +34,8 @@ namespace cAlgo.Indicators
             CreateGrid();
         }
 
+        #region Create Round Levels
+
         private void CreateGrid()
         {
             int maxLines = MaxLevels * 2;
@@ -55,5 +57,7 @@ namespace cAlgo.Indicators
         {
             return opacity * 255 / 100;
         }
+
+        #endregion Create Round Levels
     }
 }
