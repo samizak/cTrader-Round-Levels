@@ -1,5 +1,5 @@
-﻿using System;
-using cAlgo.API;
+﻿using cAlgo.API;
+using System;
 
 namespace cAlgo.Indicators
 {
@@ -11,17 +11,17 @@ namespace cAlgo.Indicators
         [Parameter(name: "Colour", DefaultValue = "Gray", Group = "Line Properties")]
         public string Colour { get; set; }
 
+        [Parameter(name: "Maximum Levels", DefaultValue = 10, Group = "Levels")]
+        public int MaxLevels { get; set; }
+
         [Parameter(name: "Opacity (%)", DefaultValue = 100, MinValue = 0, MaxValue = 100, Step = 5, Group = "Line Properties")]
         public int Opacity { get; set; }
 
-        [Parameter(name: "Thickness", DefaultValue = 1, MinValue = 1, MaxValue = 5, Group = "Line Properties")]
-        public int Thickness { get; set; }
-
-        [Parameter(name: "Step Value", DefaultValue = 50, Group = "Levels")]
+        [Parameter(name: "Step Value (Pips)", DefaultValue = 50, Group = "Levels")]
         public double StepValue { get; set; }
 
-        [Parameter(name: "Maximum Levels", DefaultValue = 10, Group = "Levels")]
-        public int MaxLevels { get; set; }
+        [Parameter(name: "Thickness", DefaultValue = 1, MinValue = 1, MaxValue = 5, Group = "Line Properties")]
+        public int Thickness { get; set; }
 
         #endregion Parameters
 
